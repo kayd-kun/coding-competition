@@ -1,19 +1,40 @@
-# Create T3 App
+# About
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a project created using [create-t3-app](https://create.t3.gg/).
 
-## What's next? How do I make an app with this?
+It is a web application for inter college coding competition happening at CST.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+**WHY:**
+- The DOMJudge server failed on us during the last intra college competition.
+- Also, a project up my resume.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
 
+Libraries used:
 - [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
 - [Prisma](https://prisma.io)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
+- [Clerk](https://clerk.com) (for authentication)
 
+Clerk was used instead of NextAuth because it has a better UI and importantly, it was easier for me to use.
+
+Note: I am also experimenting with Atomic design principles with this project.
+- Atoms
+- Molecules
+- Organisms
+- Pages
+
+## TODO:
+- [ ] Disintegrate Navigation Bar into Components 
+
+## Tasks:
+- [x] Setup HomePage
+- [ ] Setup Clerk
+    - [x] Setup Clerk with NextJS Middleware
+    - [x] Setup SignIn SignOut functionality with Clerk
+    - [ ] Create Registration functionality for team members
+- [ ] Create Dashboard 
+- [ ] Create Problem page (similar to that of Leetcode) 
 ## Learn More
 
 To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
