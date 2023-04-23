@@ -23,7 +23,7 @@ const HomeLoginRegisterButtons = () => {
       <SignedIn>
         <div className="mt-8 flex justify-center gap-4 text-center">
           <a
-            href="#"
+            href="/dashboard"
             className="block w-full rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
           >
             My Dashboard

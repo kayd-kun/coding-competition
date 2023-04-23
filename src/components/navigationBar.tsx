@@ -1,4 +1,4 @@
-import { SignedIn, SignedOut, UserButton,} from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 export default function NavigationBar() {
@@ -87,14 +87,20 @@ export default function NavigationBar() {
               </nav>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-8">
               <SignedIn>
                 <UserButton />
+                <a
+                  href="/dashboard"
+                  className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-teal-600 shadow hover:text-teal-800 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                >
+                  Dashboard
+                </a>
               </SignedIn>
               <SignedOut>
                 <div className="sm:flex sm:gap-4">
                   <a
-                    className="rounded-md bg-teal-600 hover:bg-teal-700 px-5 py-2.5 text-sm font-medium text-white shadow"
+                    className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-teal-700"
                     //   href="/"
                   >
                     <Link href={"/sign-in"}>
@@ -107,9 +113,9 @@ export default function NavigationBar() {
                       className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
                       // href="/"
                     >
-                    <Link href={"/sign-up"}>
-                      <button>Register</button>
-                    </Link>
+                      <Link href={"/sign-up"}>
+                        <button>Register</button>
+                      </Link>
                     </a>
                   </div>
                 </div>

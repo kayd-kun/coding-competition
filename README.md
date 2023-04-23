@@ -27,6 +27,13 @@ Note: I am also experimenting with Atomic design principles with this project.
 ## TODO:
 - [ ] Disintegrate Navigation Bar into Components 
 
+Notes:
+To be associated with a Team while creating an account, a Custom SignUp Clerk form should be created.
+You could also associate with a Team after he/she has signed up.
+    - This method is preferred as it is easier to implement.
+    - And I got stuck after trying to implement the Custom SignUp form.
+    - I will try to implement this later.
+
 ## Tasks:
 - [x] Setup HomePage
 - [ ] Setup Clerk
@@ -35,6 +42,7 @@ Note: I am also experimenting with Atomic design principles with this project.
     - [ ] Create Registration functionality for team members
 - [ ] Create Dashboard 
 - [ ] Create Problem page (similar to that of Leetcode) 
+
 ## Learn More
 
 To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
