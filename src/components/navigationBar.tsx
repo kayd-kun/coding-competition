@@ -1,4 +1,4 @@
-import { SignedIn, SignedOut, UserButton, UserProfile } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton,} from "@clerk/nextjs";
 import Link from "next/link";
 
 export default function NavigationBar() {

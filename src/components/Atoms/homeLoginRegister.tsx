@@ -1,29 +1,7 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Link from "next/link";
 
-const CompetitionTitle = () => {
-  return (
-    <h1 className="text-6xl font-extrabold">
-      Inter Collegate <br />
-      <strong className="block font-extrabold text-teal-700">
-        Coding Competition
-      </strong>
-    </h1>
-  );
-};
-
-const Descriptions = () => {
-  return (
-    <div className="flex justify-center">
-      <p className="mt-4 max-w-lg text-3xl">
-        You Think you can code? <br />
-        Prove it! <br />
-      </p>
-    </div>
-  );
-};
-
-const Buttons = () => {
+const HomeLoginRegisterButtons = () => {
   return (
     <>
       <SignedOut>
@@ -56,12 +34,4 @@ const Buttons = () => {
   );
 };
 
-export default function HomeHeader() {
-  return (
-    <div className="max-w-xl text-center">
-      <CompetitionTitle />
-      <Descriptions />
-      <Buttons />
-    </div>
-  );
-}
+export default HomeLoginRegisterButtons;
