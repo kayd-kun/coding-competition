@@ -1,3 +1,6 @@
+import { SignedIn, SignedOut, UserButton, UserProfile } from "@clerk/nextjs";
+import Link from "next/link";
+
 export default function NavigationBar() {
   return (
     <>
@@ -85,23 +88,32 @@ export default function NavigationBar() {
             </div>
 
             <div className="flex items-center gap-4">
-              <div className="sm:flex sm:gap-4">
-                <a
-                  className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                  //   href="/"
-                >
-                  Login
-                </a>
-
-                <div className="hidden sm:flex">
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+              <SignedOut>
+                <div className="sm:flex sm:gap-4">
                   <a
-                    className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-                    // href="/"
+                    className="rounded-md bg-teal-600 hover:bg-teal-700 px-5 py-2.5 text-sm font-medium text-white shadow"
+                    //   href="/"
                   >
-                    Register
+                    <Link href={"/sign-in"}>
+                      <button>Login</button>
+                    </Link>
                   </a>
+
+                  <div className="hidden sm:flex">
+                    <a
+                      className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
+                      // href="/"
+                    >
+                    <Link href={"/sign-up"}>
+                      <button>Register</button>
+                    </Link>
+                    </a>
+                  </div>
                 </div>
-              </div>
+              </SignedOut>
 
               <div className="block md:hidden">
                 <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">

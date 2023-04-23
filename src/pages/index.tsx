@@ -4,7 +4,9 @@ import Head from "next/head";
 import HomeHeader from "~/components/homeHeader";
 // import { api } from "~/utils/api";
 import Image from "next/image";
-import NavigationBar from "~/components/navigationBara";
+import NavigationBar from "~/components/navigationBar";
+import { SignIn, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -18,6 +20,17 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <NavigationBar />
+
+        {/* <SignedIn>
+          <UserButton />
+        </SignedIn>
+
+        <SignedOut>
+          <Link href="/sign-in">
+            <button>Sign In</button>
+          </Link>
+        </SignedOut> */}
+
         <section>
           {/* BACKGROUND IMAGE */}
           <div style={{ width: "100%", height: "100vh", position: "absolute" }}>
